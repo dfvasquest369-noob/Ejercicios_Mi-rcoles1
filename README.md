@@ -1,2 +1,2 @@
-# Ejercicios_Mi-rcoles1
+# Ejercicios_Miercoles1
 Mi primer repositorio
