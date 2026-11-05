@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesiónes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Trabajos de HTML</h1>
+    <p>Haz clic en cualquiera de los enlaces para ver mis despliegues</p>
+
+    <ul class="project-list">
+        <li class="project-item">
+            <a href="Sesión1/Reto/index2.html" target="_blank">Sesión1</a>
+            <p>Primer Proyecto.</p>
+        </li>
+        <li class="project-item">
+            <a href="Sesión1/Tarea/index3.html" target="_blank">Sesión1</a>
+            <p>Segundo Proyecto.</p>
+        </li>
+        <li class="project-item">
+            <a href="https://github.com/dfvasquest369-noob/Ejercicios_Mi-rcoles1/tree/main/Sesi%C3%B3n1" target="_blank">Repositorio Completo</a>
+            <p>Resumen Repositorio.</p>
+        </li>
+    </body>
+    </html>
