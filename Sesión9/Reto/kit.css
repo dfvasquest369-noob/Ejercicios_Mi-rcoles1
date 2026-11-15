@@ -1,0 +1,299 @@
+/* ========== 1. VARIABLES ========== */
+:root {
+  --principal: #2563eb;
+  --secundario: #475569;
+  --peligro: #dc2626;
+  --aviso: #b45309;
+  --info: #0e7490;
+  --exito: #15803d;
+  --fondo: #f1f5f9;
+  --superficie: #ffffff;
+  --texto: #172033;
+  --texto-suave: #64748b;
+  --borde: #dbe3ec;
+  --radio: 14px;
+  --sombra: 0 12px 30px rgba(23, 32, 51, 0.08);
+  --fuente: "Segoe UI", Arial, sans-serif;
+}
+
+/* ========== 2. BASE ========== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 2rem 1rem;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--fuente);
+  line-height: 1.6;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+.pagina {
+  width: min(100%, 900px);
+  margin: 0 auto;
+}
+
+.encabezado {
+  margin-bottom: 1.5rem;
+}
+
+.encabezado h1 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  line-height: 1.15;
+}
+
+.encabezado p {
+  margin: 0;
+  color: var(--texto-suave);
+}
+
+.rejilla {
+  display: grid;
+  gap: 1rem;
+}
+
+.panel {
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie);
+  box-shadow: var(--sombra);
+}
+
+.panel h2 {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+}
+
+@media (min-width: 700px) {
+  body {
+    padding: 3rem 1.5rem;
+  }
+
+  .rejilla {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .panel-paleta,
+  .panel-alertas {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ========== 3. COMPONENTES ========== */
+.paleta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  gap: 0.75rem;
+}
+
+.muestra {
+  overflow: hidden;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  background: var(--superficie);
+}
+
+.muestra-color {
+  height: 58px;
+  background: var(--color-muestra);
+}
+
+.muestra-nombre {
+  display: block;
+  padding: 0.45rem 0.6rem;
+  color: var(--texto);
+  font-family: Consolas, monospace;
+  font-size: 0.82rem;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.boton {
+  padding: 0.6rem 0.95rem;
+  border: 1px solid var(--principal);
+  border-radius: 9px;
+  background: var(--principal);
+  color: #fff;
+  font-weight: 650;
+  cursor: pointer;
+  transition: filter 150ms ease, transform 150ms ease;
+}
+
+.boton:hover:not(:disabled) {
+  filter: brightness(0.92);
+  transform: translateY(-1px);
+}
+
+.boton-secundario {
+  border-color: var(--secundario);
+  background: var(--secundario);
+}
+
+.boton-peligro {
+  border-color: var(--peligro);
+  background: var(--peligro);
+}
+
+.boton:disabled {
+  border-color: #cbd5e1;
+  background: #e2e8f0;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+.alertas,
+.insignias {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.alerta {
+  margin: 0;
+  padding: 0.7rem 0.85rem;
+  border-left: 4px solid;
+  border-radius: 7px;
+}
+
+.alerta-exito {
+  border-color: var(--exito);
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.alerta-error {
+  border-color: var(--peligro);
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.alerta-aviso {
+  border-color: var(--aviso);
+  background: #fffbeb;
+  color: #92400e;
+}
+
+.alerta-info {
+  border-color: var(--info);
+  background: #ecfeff;
+  color: #155e75;
+}
+
+.insignias {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.insignia {
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+
+.insignia-nuevo {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.insignia-oferta {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.insignia-agotado {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.campo {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.campo label {
+  font-weight: 600;
+}
+
+.campo input {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--texto);
+}
+
+/* ========== 4. ESTADOS ========== */
+.estado-lista {
+  display: grid;
+  gap: 1rem;
+}
+
+.cargando {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--texto-suave);
+}
+
+.cargando::before {
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid #cbd5e1;
+  border-top-color: var(--principal);
+  border-radius: 50%;
+  content: "";
+  animation: girar 0.8s linear infinite;
+}
+
+.hecha {
+  color: var(--texto-suave);
+  text-decoration: line-through;
+}
+
+input.error {
+  border-color: var(--peligro);
+  background: #fef2f2;
+}
+
+small.error {
+  color: var(--peligro);
+  font-size: 0.85rem;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

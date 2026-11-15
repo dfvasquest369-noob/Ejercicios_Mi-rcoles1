@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f1f5f9">
+  <title>Kit de interfaz</title>
+  <link rel="stylesheet" href="kit.css">
+</head>
+<body>
+  <main class="pagina">
+    <header class="encabezado">
+      <h1>Kit de interfaz</h1>
+      <p>Colores, componentes y estados reutilizables.</p>
+    </header>
+
+    <div class="rejilla">
+      <section class="panel panel-paleta" aria-labelledby="titulo-paleta">
+        <h2 id="titulo-paleta">Paleta de colores</h2>
+        <div class="paleta">
+          <div class="muestra">
+            <div class="muestra-color" style="--color-muestra: var(--principal)"></div>
+            <code class="muestra-nombre">--principal</code>
+          </div>
+          <div class="muestra">
+            <div class="muestra-color" style="--color-muestra: var(--secundario)"></div>
+            <code class="muestra-nombre">--secundario</code>
+          </div>
+          <div class="muestra">
+            <div class="muestra-color" style="--color-muestra: var(--peligro)"></div>
+            <code class="muestra-nombre">--peligro</code>
+          </div>
+          <div class="muestra">
+            <div class="muestra-color" style="--color-muestra: var(--aviso)"></div>
+            <code class="muestra-nombre">--aviso</code>
+          </div>
+          <div class="muestra">
+            <div class="muestra-color" style="--color-muestra: var(--info)"></div>
+            <code class="muestra-nombre">--info</code>
+          </div>
+          <div class="muestra">
+            <div class="muestra-color" style="--color-muestra: var(--exito)"></div>
+            <code class="muestra-nombre">--exito</code>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="titulo-botones">
+        <h2 id="titulo-botones">Botones</h2>
+        <div class="acciones">
+          <button class="boton" type="button">Principal</button>
+          <button class="boton boton-secundario" type="button">Secundario</button>
+          <button class="boton boton-peligro" type="button">Peligro</button>
+          <button class="boton" type="button" disabled>Deshabilitado</button>
+        </div>
+      </section>
+
+      <section class="panel panel-alertas" aria-labelledby="titulo-alertas">
+        <h2 id="titulo-alertas">Alertas</h2>
+        <div class="alertas">
+          <p class="alerta alerta-exito" role="status">Operación completada correctamente.</p>
+          <p class="alerta alerta-error" role="alert">No se pudo completar la operación.</p>
+          <p class="alerta alerta-aviso">Revisa la información antes de continuar.</p>
+          <p class="alerta alerta-info">Hay una actualización disponible.</p>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="titulo-insignias">
+        <h2 id="titulo-insignias">Insignias</h2>
+        <div class="insignias">
+          <span class="insignia insignia-nuevo">Nuevo</span>
+          <span class="insignia insignia-oferta">Oferta</span>
+          <span class="insignia insignia-agotado">Agotado</span>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="titulo-estados">
+        <h2 id="titulo-estados">Estados y validación</h2>
+        <div class="estado-lista">
+          <span class="cargando" role="status">Cargando...</span>
+          <span class="hecha">Tarea completada</span>
+          <div class="campo">
+            <label for="correo">Correo electrónico</label>
+            <input id="correo" class="error" type="email" value="correo-invalido" aria-invalid="true" aria-describedby="error-correo">
+            <small id="error-correo" class="error">Escribe un correo electrónico válido.</small>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
