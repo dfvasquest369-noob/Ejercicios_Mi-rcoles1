@@ -5,8 +5,8 @@
 :root {
     color-scheme: light;
     font-family: "Segoe UI", Arial, sans-serif;
-    color: #172033;
-    background: #f3f6fb;
+    color: #1f2937;
+    background: #eefaf7;
 }
 
 body {
@@ -17,14 +17,14 @@ body {
 
 body > h1 {
     margin: 0;
-    color: #172554;
+    color: #115e59;
     font-size: clamp(2rem, 5vw, 3.25rem);
     letter-spacing: -0.04em;
 }
 
 body > p {
     margin: 12px 0 36px;
-    color: #5b6475;
+    color: #52665f;
     font-size: 1.05rem;
     line-height: 1.6;
 }
@@ -40,15 +40,15 @@ body > p {
 
 .session-item {
     padding: 24px;
-    border: 1px solid #e1e7f0;
+    border: 1px solid #d6ebe5;
     border-radius: 16px;
-    background: #fff;
-    box-shadow: 0 8px 24px rgb(23 32 51 / 5%);
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgb(17 94 89 / 8%);
 }
 
 .session-item h2 {
     margin: 0 0 18px;
-    color: #263b76;
+    color: #14736b;
     font-size: 1.3rem;
 }
 
@@ -63,36 +63,36 @@ body > p {
 .project-item {
     padding: 14px 16px;
     border-radius: 10px;
-    background: #f6f8fc;
+    background: #f1f8f6;
     transition: background-color 160ms ease, transform 160ms ease;
 }
 
 .project-item:hover {
     transform: translateY(-2px);
-    background: #edf2ff;
+    background: #dcf1eb;
 }
 
 .project-item a {
-    color: #3157b7;
+    color: #0f766e;
     font-weight: 650;
     text-decoration: none;
 }
 
 .project-item a:hover {
-    color: #1d3d91;
+    color: #0b534d;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 
 .project-item a:focus-visible {
     border-radius: 3px;
-    outline: 3px solid #91aaf5;
+    outline: 3px solid #80bdb3;
     outline-offset: 3px;
 }
 
 .project-item p {
     margin: 5px 0 0;
-    color: #687386;
+    color: #5c7069;
     font-size: 0.9rem;
     line-height: 1.45;
 }
